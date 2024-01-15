@@ -6,8 +6,8 @@ const User = require('../models/userModel');
 // @desc    Get events
 // @route   GET /api/event
 // @access  Private
-const getEvent = asyncHandler (async (req, res) => {
-    const events = await Goal.find({ user: req.user.id});
+const getEvents = asyncHandler (async (req, res) => {
+    const events = await Event.find({ user: req.user.id});
     res.status(200).json(events);
 })
 
@@ -24,10 +24,10 @@ const setEvent = asyncHandler (async (req, res) => {
         text: req.body.text,
         user: req.user.id
     })
-    res.status(200).json(goal);
+    res.status(200).json(event);
 })
 
-// @desc    Update goals
+// @desc    Update events
 // @route   PUT /api/events/:id
 // @access  Private
 const updateEvent = asyncHandler (async (req, res) => {
@@ -46,8 +46,8 @@ const updateEvent = asyncHandler (async (req, res) => {
         throw new Error('User not found');
     }
 
-    // make sure that logged in user can only update their own goals
-    // by making sure that logged in user matches goal user
+    // make sure that logged in user can only update their own events
+    // by making sure that logged in user matches event user
     if(event.user.toString() !== user.id) {
         res.status(401);
         throw new Error('User not authorized');
@@ -60,7 +60,7 @@ const updateEvent = asyncHandler (async (req, res) => {
 // @desc    Delete events
 // @route   DELETE /api/events/:id
 // @access  Private
-const deleteGoal = asyncHandler (async (req, res) => {
+const deleteEvent = asyncHandler (async (req, res) => {
     const event = await Event.findById(req.params.id);
 
     if (!event) {
@@ -84,8 +84,8 @@ const deleteGoal = asyncHandler (async (req, res) => {
     }
     
     const deletedEvent = await Event.findByIdAndDelete(req.params.id);
-    // res.status(200).json(deletedEvent);
-    res.status(200).json({ id: req.params.id})
+     res.status(200).json(deletedEvent);
+   // res.status(200).json({ id: req.params.id})
     // await event.remove();
     // res.status(200).json({ id: req.params.id})
 })
@@ -94,5 +94,5 @@ module.exports = {
     getEvents,
     setEvent,
     updateEvent,
-    deletedEvent
+    deleteEvent
 }
