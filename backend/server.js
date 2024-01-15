@@ -11,10 +11,10 @@ const app = express();
 
 
 // -----------add the middleware----------
-// app.use(express.json())
-// app.use(express.urlencoded({extended: false}))
+    app.use(express.json())
+  app.use(express.urlencoded({extended: false}))
 
-// app.use('/api/goals', require('./routes/goalRoutes'));
+ app.use('/api/events', require('./controllers/eventController'));
 // app.use('/api/users', require('./routes/userRoutes'));
 
 //  =====  our first applications had all of the routes in the server like the one below...
