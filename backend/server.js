@@ -2,7 +2,7 @@
 const dotenv = require('dotenv').config();//make sure dotenv exist in the package.json dependencies b/c it striggers the nodemon to crash
 const express = require('express')
 const colors = require('colors');
-const { errorHandler } = require('./middleware/errorMiddleware.');
+// const { errorHandler } = require('./middleware/errorMiddleware.');
 const connectDB = require('./config/database.');
 const PORT = process.env.PORT || 5000;
 

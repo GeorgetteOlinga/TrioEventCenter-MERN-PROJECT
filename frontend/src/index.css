@@ -1,4 +1,42 @@
-:root {
+body {
+  background-color: whitesmoke;
+  margin: 0;
+  /* height: 100vh; */
+}
+
+.center {
+  text-align: center;
+}
+.modal-body {
+  padding: 0 !important;
+}
+.modal_toggle {
+  background-color: darkred !important;
+  color: none !important;
+  border-color: none !important;
+  outline: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.modal_toggle a {
+  outline: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+.modal_toggle:hover {
+  background-color: darkred !important;
+  color: none !important;
+  border-color: none !important;
+  outline: none !important;
+  border: 0 !important;
+}
+h1 {
+  text-align: center;
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +103,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

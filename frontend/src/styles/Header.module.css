@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #56c6a9;
+  padding: 1rem;
+}
+
+.logo_image > img {
+  width: 17%;
+}
+
+.header_right {
+  display: flex;
+  flex-direction: column;
+}
+.header_right a {
+  margin-top: 5px;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: black;
+}
+.header_right button {
+  /* font-size: 1.05rem; */
+
+  background-color: darkred;
+  border-radius: 0;
+}

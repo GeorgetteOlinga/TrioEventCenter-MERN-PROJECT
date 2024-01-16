@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(118, 110, 110);
+  /* position: absolute;
+  bottom: 0;
+  */
+}
+.logo img {
+  width: 15%;
+}
+.text {
+  color: white;
+}
