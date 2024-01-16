@@ -1,37 +1,39 @@
-// const express = require('express');
-// const router = express.Router();
-// const { 
-//     getEvent, 
-//     setEvent, 
-//     updateEvent, 
-//     deleteEvent 
-// } = require('../controllers/eventController')
+import { getEvents } from '../controllers/eventController';// add when debugguing
 
-// const { protect } = require('../middleware/authMiddleware');
+const express = require('express');
+const router = express.Router();
+const { 
+    getEvent, 
+    setEvent, 
+    updateEvent, 
+    deleteEvent 
+} = require('../controllers/eventController')
 
-// /*
-// const usersCtrl = require('../../controllers/api/users.cjs');
+const { protect } = require('../middleware/authMiddleware');
 
-// // POST /api/users
-// router.post('/', usersCtrl.create);*/
+/*
+const usersCtrl = require('../../controllers/api/users.cjs');
 
-// // you could update to 
-// // router.route('/').get(getEvent).post(setEvent)
-// // and 
-// // router.route('/:id).delete(deleteEvent).put(updateEvent)
-// // but the below code matches better with the coding style in class
+// POST /api/users
+router.post('/', usersCtrl.create);*/
 
-// router.get('/', protect, getEvent
-// // move this functionality to the controller
-// // (req, res) => {
-// //     res.status(200).json({message: 'get event'});
-// // }
-// );
+// you could update to 
+// router.route('/').get(getEvent).post(setEvent)
+// and 
+// router.route('/:id).delete(deleteEvent).put(updateEvent)
+// but the below code matches better with the coding style in class
 
-// router.post('/', protect, setEvent);
+router.get('/', protect, getEvents
+// move this functionality to the controller
+// (req, res) => {
+//     res.status(200).json({message: 'get event'});
+// }
+);
 
-// router.put('/:id', protect, updateEvent);
+router.post('/', protect, setEvent);
 
-// router.delete('/:id', protect, deleteEvent);
+router.put('/:id', protect, updateEvent);
 
-// module.exports = router;
+router.delete('/:id', protect, deleteEvent);
+
+module.exports = router;

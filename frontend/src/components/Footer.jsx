@@ -8,7 +8,10 @@ const Footer = () => {
         <img src={logo} alt="" />
       </div>
       <div className={styles.text}>
-        <h4>You can add footer text here</h4>
+      <footer>
+        &copy; 2023 Georgette
+    </footer>
+        
       </div>
     </div>
   );
