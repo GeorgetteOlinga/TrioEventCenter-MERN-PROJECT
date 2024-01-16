@@ -1,31 +1,22 @@
 {
   "name": "event-center-mern-project",
   "version": "1.0.0",
-  "proxy": "http://localhost:5000",
+  "description": "Mern full app project for per scholas end of the program",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm run dev --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "server": "nodemon backend/server.js"
   },
-  "keywords": [],
   "author": "Georgette Olinga",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-async-handler": "^1.2.0",
-    "favicon": "^0.0.2",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.4"
+    "mongoose": "^8.1.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "nodemon": "^3.0.2"
-  },
-  "description": ""
+  }
 }
