@@ -3,15 +3,15 @@ const express = require('express')
 const dotenv = require('dotenv').config();//make sure dotenv exist in the package.json dependencies b/c it striggers the nodemon to crash
 const { errorHandler } = require('./middleware/errorMiddleware');
  //bring in all dependencies
-
+// Connect to the database
+const connectDB = require('../config/db.js');//connect database
 const colors = require('colors');
 // const { errorHandler } = require('./middleware/errorMiddleware.');
 const PORT = process.env.PORT || 5000;
 
 connectDB();
 
-// Connect to the database
-const connectDB = require('../config/database.js');//connect database
+
 
 // ------------create my app-----------
  const app = express();
