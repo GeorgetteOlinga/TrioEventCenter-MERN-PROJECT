@@ -11,19 +11,24 @@ const colors = require('colors');
 const PORT = process.env.PORT || 5000;
 
 connectDB();
-
-
+// mongoose.connect(connectDB)
+// mongoose.connection.once('open', () => {
+//   console.log('connected to mongo')
+// })
+// app.set('view engine', 'jsx');
+// app.set('views', './views');
+// app.engine('jsx', jsxViewEngine());
 
 // ------------create my app-----------
  const app = express();
 
 
 // -----------add the middleware----------
-//     app.use(express.json())
-//   app.use(express.urlencoded({extended: false}))
+    app.use(express.json())
+  app.use(express.urlencoded({extended: false}))
 
-//  app.use('/api/events', require('./routes/eventRoutes'));
-//  app.use('/api/users', require('./routes/userRoutes'));
+ app.use('/api/events', require('./routes/eventRoutes'));
+ app.use('/api/users', require('./routes/userRoutes'));
 
 // //  =====  our first applications had all of the routes in the server like the one below...
 // // move routes into routes folder/file
