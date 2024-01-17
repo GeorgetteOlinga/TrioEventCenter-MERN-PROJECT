@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Singup.module.css";
 import NavBar from "./NavBar.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [firstname, setFirstName] = useState("");
@@ -9,6 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +28,7 @@ const Signup = () => {
       password,
     };
 
-    fetch("http://localhost:4000/user", {
+    fetch("http://localhost:4000/signup", {
       method: "post",
       body: JSON.stringify(obj),
       headers: {
@@ -42,6 +44,7 @@ const Signup = () => {
           setPassword("");
           setConfirmPassword("");
           alert("User added successfully");
+          navigate("/login");
         } else {
           alert("Something went wrong");
         }
