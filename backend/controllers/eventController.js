@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler');
 
-const Event = require('../models/eventModel');
+const Event = require('../models/eventModels.js');
 const User = require('../models/userModel.js');
 
 // @desc    Get events

@@ -1,12 +1,12 @@
-import { getEvents } from '../controllers/eventController';// add when debugguing
+//import { getEvents } from '../controllers/eventController';// add when debugguing
 
 const express = require('express');
 const router = express.Router();
 const { 
-    getEvent, 
+    getEvents, 
     setEvent, 
     updateEvent, 
-    deleteEvent 
+    deleteEvent, 
 } = require('../controllers/eventController')
 
 const { protect } = require('../middleware/authMiddleware');
@@ -29,6 +29,7 @@ router.get('/', protect, getEvents
 //     res.status(200).json({message: 'get event'});
 // }
 );
+
 
 router.post('/', protect, setEvent);
 

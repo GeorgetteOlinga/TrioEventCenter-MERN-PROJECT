@@ -1,10 +1,11 @@
 
+
 const express = require('express')
 const dotenv = require('dotenv').config();//make sure dotenv exist in the package.json dependencies b/c it striggers the nodemon to crash
 const { errorHandler } = require('./middleware/errorMiddleware');
  //bring in all dependencies
 // Connect to the database
-const connectDB = require('../config/db.js');//connect database
+const connectDB = require('./config/db');//connect database
 const colors = require('colors');
 // const { errorHandler } = require('./middleware/errorMiddleware.');
 const PORT = process.env.PORT || 5000;
@@ -18,11 +19,11 @@ connectDB();
 
 
 // -----------add the middleware----------
-    app.use(express.json())
-  app.use(express.urlencoded({extended: false}))
+//     app.use(express.json())
+//   app.use(express.urlencoded({extended: false}))
 
- app.use('/api/events', require('./routes/eventRoutes'));
- app.use('/api/users', require('./routes/userRoutes'));
+//  app.use('/api/events', require('./routes/eventRoutes'));
+//  app.use('/api/users', require('./routes/userRoutes'));
 
 // //  =====  our first applications had all of the routes in the server like the one below...
 // // move routes into routes folder/file
