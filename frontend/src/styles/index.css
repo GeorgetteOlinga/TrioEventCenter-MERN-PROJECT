@@ -35,11 +35,3 @@ body {
 h1 {
   text-align: center;
 }
-.custom_signup_class {
-  max-width: 100% !important;
-  margin: 0 !important;
-  /* padding: 0 !important; */
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: 0 0 !important;
-}

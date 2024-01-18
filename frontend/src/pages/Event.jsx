@@ -4,7 +4,7 @@ import styles from "../styles/Event.module.css";
 const Event = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate] = useState("2022-01-17");
+  const [date, setDate] = useState("");
   const [eventType, setEventType] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
   const [contact, setContact] = useState("");
@@ -15,35 +15,13 @@ const Event = () => {
       name,
       email,
       date,
-      type: eventType,
-      people: numberOfPeople,
-      number: contact,
-      detail: additionalInfo,
+      eventType,
+      numberOfPeople,
+      contact,
+      additionalInfo,
     };
 
-    fetch("http://localhost:4000/event", {
-      method: "post",
-      body: JSON.stringify(obj),
-      headers: {
-        "Content-Type": "application/json",
-        authorization: localStorage.getItem("token"),
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.status == "success") {
-          setName("");
-          setEmail("");
-          setDate("");
-          setEventType("");
-          setNumberOfPeople("");
-          setAdditionalInfo("");
-          setContact("");
-          alert(data.message);
-        } else {
-          console.log("Something went wrong");
-        }
-      });
+    console.log(obj);
   };
 
   return (
@@ -72,6 +50,7 @@ const Event = () => {
         Date:
         <input
           type="date"
+          value={date}
           onChange={(e) => setDate(e.target.value)}
           className={styles.inputField}
         />
