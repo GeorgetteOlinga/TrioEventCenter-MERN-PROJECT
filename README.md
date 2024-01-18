@@ -16,7 +16,8 @@ is done, what still in progress, and what is still need to be covered.>
 [title] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
 
 ### github repository
-[title](https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
+<click link below>
+[my-github-repo-link](https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
 
 ### Technologies
 1.  frontend---------REACT
@@ -41,7 +42,7 @@ is done, what still in progress, and what is still need to be covered.>
 - npm vite@latest in terminal to create a react app
 
 ### browser
-1. localhost:5000-----backend....node server.cjs
+1. localhost:5000-----backend....node server.js
 2. localhost:5173-----frontend....npm run dev
 
 ### Unsolved Problems:
