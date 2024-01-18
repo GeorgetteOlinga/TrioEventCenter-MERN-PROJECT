@@ -11,7 +11,7 @@
 ![click-here-to-view-wireframe](IMG_0975.jpg)
 
 ### project planning
-<please follow the link below to view how the project was segmented and the time line. what 
+<Please follow the link below to view how the project was segmented and the time line. what 
 is done, what still in progress, and what is still need to be covered.>
 
 [JiraSoftware-link] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
@@ -59,7 +59,8 @@ is done, what still in progress, and what is still need to be covered.>
 - polish the website and remove any amaterism.
 
 ### ReadMe Cheat Sheet
-[my-github-repo-link] https://www.markdownguide.org/cheat-sheet/
+
+[MarkDown-link] https://www.markdownguide.org/cheat-sheet/
 
 ### Images
 ![Alt text](triologo.jpg)
