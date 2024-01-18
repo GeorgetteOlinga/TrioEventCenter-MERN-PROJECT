@@ -8,15 +8,18 @@
 4. a sing in and a log out botton
 
 ### Wireframe, Flowchart & ERD diagram
-![Alt text](IMG_0975.jpg)
+![click-here-to-view-wireframe](IMG_0975.jpg)
 
 ### project planning
 <please follow the link below to view how the project was segmented and the time line. what 
 is done, what still in progress, and what is still need to be covered.>
-[title] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
+
+[JiraSoftware-link] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
 
 ### github repository
+
 <click link below>
+
 [my-github-repo-link](https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
 
 ### Technologies
