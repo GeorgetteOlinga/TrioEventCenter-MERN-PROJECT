@@ -15,15 +15,15 @@
 is done, what still in progress, and what is still need to be covered.>
 [title] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
 
-#### github repository
+### github repository
 [title](https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
 
-#### Technologies
+### Technologies
 1.  frontend---------REACT
 2. backend---------EXPRESS JS,NODE JS
 3. database--------MONGODB
 
-#####  Backend (Node.js and Express):Dependencies
+### Backend (Node.js and Express):Dependencies
 
 - bcrypt (v5.1.1): Library for hashing passwords.
 - cors (v2.8.5): Middleware for enabling Cross-Origin Resource Sharing.
@@ -34,28 +34,26 @@ is done, what still in progress, and what is still need to be covered.>
 - morgan (v1.10.0): HTTP request logger middleware for Node.js.
 - serve-favicon (v2.5.0): Middleware for serving a favicon.
 
-##### Frontend (React): packages
+### Frontend (React): packages
 - react (v18.2.0): JavaScript library for building user interfaces.
 - react-dom (v18.2.0): Provides DOM-specific methods for React.
 - react-router-dom (v6.21.1): Routing library for React applications.
 - npm vite@latest in terminal to create a react app
 
-##### browser
+### browser
 1. localhost:5000-----backend....node server.cjs
 2. localhost:5173-----frontend....npm run dev
 
-#### Unsolved Problems:
+### Unsolved Problems:
 - unfinished frontend functionalities
 - connect frontend to backend 
 - deploy on render.com or mongo
 
-#### Future Enhancements:
+### Future Enhancements:
 - be able to book and make the payment online
 - visitors should be able to schedule a visit to the banquet Hall.
 - polish the website and remove any amaterism.
 
-#### Images
+### Images
 ![Alt text](triologo.jpg)
 
-#### Deployment link
-<coming soon...>
