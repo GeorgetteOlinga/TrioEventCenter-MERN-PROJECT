@@ -58,6 +58,9 @@ is done, what still in progress, and what is still need to be covered.>
 - visitors should be able to schedule a visit to the banquet Hall.
 - polish the website and remove any amaterism.
 
+### ReadMe Cheat Sheet
+[my-github-repo-link] https://www.markdownguide.org/cheat-sheet/
+
 ### Images
 ![Alt text](triologo.jpg)
 
