@@ -14,7 +14,7 @@
 <Please follow the link below to view how the project was segmented and the time line. what 
 is done, what still in progress, and what is still need to be covered.>
 
-[JiraSoftware-link] (#https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
+[JiraSoftware-link] (https://olingageorgette237.atlassian.net/jira/software/c/projects/TECW/boards/2/backlog)
 
 ### github repository
 
@@ -60,7 +60,7 @@ is done, what still in progress, and what is still need to be covered.>
 
 ### ReadMe Cheat Sheet
 
-[MarkDown-link] (#https://www.markdownguide.org/cheat-sheet/)
+[MarkDown-link](https://www.markdownguide.org/cheat-sheet/)
 
 ### Images
 ![Alt text](triologo.jpg)
