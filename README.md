@@ -18,9 +18,7 @@ is done, what still in progress, and what is still need to be covered.>
 
 ### github repository
 
-<click link below>
-
-[my-github-repo-link](#https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
+[](https://github.com/GeorgetteOlinga/TrioEventCenter-MERN-PROJECT)
 
 ### Technologies
 1.  frontend---------REACT

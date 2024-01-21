@@ -3,13 +3,19 @@
 const express = require('express')
 const dotenv = require('dotenv').config();//make sure dotenv exist in the package.json dependencies b/c it striggers the nodemon to crash
 const { errorHandler } = require('./middleware/errorMiddleware');
- //bring in all dependencies
+ //bring in all dependencies--------
+ const path = require('path')
+
 // Connect to the database
 const connectDB = require('./config/db');//connect database
 const colors = require('colors');
 // const { errorHandler } = require('./middleware/errorMiddleware.');
 const PORT = process.env.PORT || 5000;
+// ------------create my app-----------
+const app = express();
 
+
+app.use(express.static(path.join(__dirname, 'dist')));
 connectDB();
 // mongoose.connect(connectDB)
 // mongoose.connection.once('open', () => {
@@ -19,8 +25,6 @@ connectDB();
 // app.set('views', './views');
 // app.engine('jsx', jsxViewEngine());
 
-// ------------create my app-----------
- const app = express();
 
 
 // -----------add the middleware----------
