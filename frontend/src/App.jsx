@@ -1,9 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar.jsx";
-import MyRoutes from "../../components/routes/Routes.jsx";
-import Header from "../../components/header/Header.jsx";
-import Footer from "../../components/footer/Footer.jsx";
-import SignupModal from "../SignupModal/SignupModal.jsx";
+import NavBar from "./components/NavBar/NavBar.jsx";
+import MyRoutes from "./components/routes/Routes.jsx";
+import Header from "./components/header/Header.jsx";
+import 'react-toastify/dist/ReactToastify.css'
+import Login from './pages/Login';
+import Register from './pages/Register/Register.jsx';
+
+
 // import Signup from "./Signup.jsx";
 
 const App = () => {
@@ -14,7 +17,13 @@ const App = () => {
         <Header />
         <NavBar />
         <MyRoutes />
-        {/* <Footer /> */}
+        <Footer /> 
+        <Routes>
+        <Route path='/' element={ <Home />} />
+        <Route path='/login' element={ <Login />} />
+        <Route path='/register' element={ <Register />} />
+        </Routes>
+                                 
       </Router>
     </div>
   );
