@@ -1,30 +1,25 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar.jsx";
-import MyRoutes from "./components/routes/Routes.jsx";
-import Header from "./components/header/Header.jsx";
+import NavBar from "../components/NavBar/NavBar.jsx";
+// import MyRoutes from "./components/routes/Routes.jsx";
+import Header from "../components/header/Header.jsx";
 import 'react-toastify/dist/ReactToastify.css'
-import Login from './pages/Login';
-import Register from './pages/Register/Register.jsx';
-
+import Login from "./pages/Login";
+import Register from "../pages/Register/Register.jsx";
 
 // import Signup from "./Signup.jsx";
 
 const App = () => {
   return (
     <div>
-      <Router>
-        {!localStorage.getItem("token") && <SignupModal />}
+      <Routes>
         <Header />
         <NavBar />
-        <MyRoutes />
-        <Footer /> 
-        <Routes>
-        <Route path='/' element={ <Home />} />
-        <Route path='/login' element={ <Login />} />
-        <Route path='/register' element={ <Register />} />
-        </Routes>
-                                 
-      </Router>
+        {!localStorage.getItem("token") && <SignupModal />}
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };

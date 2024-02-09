@@ -33,7 +33,8 @@ const logout = () => {
 const authService = {
     register,
     logout,
-    login
+    login,
+    reset
 }
 
 export default authService
