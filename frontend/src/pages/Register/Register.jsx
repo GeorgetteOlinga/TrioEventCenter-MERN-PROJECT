@@ -1,9 +1,10 @@
-    import { useState, useEffect } from 'react';
+    import React, { useState, useEffect } from 'react';
     import { useSelector, useDispatch } from 'react-redux';
     import { useNavigate } from 'react-router-dom';
+    import SignupModal from "../../pages/signUpForm/Signup";
     // import { toast } from 'react-toastify';
     import { FaUser } from 'react-icons/fa';
-    // import { register, reset } from '../store/auth/authSlice';
+     import { register, reset } from '../../store/auth/authSlice';
     // import Spinner from '../components/Spinner'
     
     function Register() {
@@ -63,7 +64,8 @@
     
         return (
             <>
-                <section className='heading'>
+            <SignupModal />
+                {/* <section className='heading'>
                     <h1>
                         <FaUser /> Register
                     </h1>
@@ -76,8 +78,8 @@
                             <input
                                 type="text"
                                 className="form-control"
-                                id="name"
-                                name="name"
+                                id="fname"
+                                name="lname"
                                 value={name.firstName}
                                 placeholder='Enter your First name'
                                 onChange={onChange}
@@ -85,8 +87,8 @@
                                <input
                                 type="text"
                                 className="form-control"
-                                id="name"
-                                name="name"
+                                id="lname"
+                                name="lname"
                                 value={name.lastName}
                                 placeholder='Enter your Last name'
                                 onChange={onChange}
@@ -134,7 +136,7 @@
                             </button>
                         </div>
                     </form>
-                </section>
+                </section> */}
             </>
         )
     }

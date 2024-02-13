@@ -9,12 +9,15 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 // Connect to the database
 const connectDB = require('./config/db');//connect database
 const colors = require('colors');
+const cors = require('cors');
 // const { errorHandler } = require('./middleware/errorMiddleware.');
 const PORT = process.env.PORT || 5000;
 // ------------create my app-----------
 const app = express();
 
-
+app.use(cors({
+  origin: "*"
+}))
 app.use(express.static(path.join(__dirname, 'dist')));
 connectDB();
 // mongoose.connect(connectDB)
@@ -32,6 +35,7 @@ connectDB();
   app.use(express.urlencoded({extended: false}))
 
  app.use('/api/events', require('./routes/eventRoutes'));
+ http://localhost:5000/api/users
  app.use('/api/users', require('./routes/userRoutes'));
 
 // //  =====  our first applications had all of the routes in the server like the one below...

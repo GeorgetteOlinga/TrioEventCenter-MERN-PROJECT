@@ -1,3 +1,4 @@
+import React from 'react'
 import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -28,14 +29,14 @@ const Header = () => {
         <button>
           {/* <EventModal /> */}
         </button>
-        { <button>
-          <SignupModal />
-        </button> }
+        
+          {/* <SignupModal /> */}
+        
         <button className='btn' onClick={onLogout}>          <FaSignOutAlt />Logout</button>
         <Link to="contact">Contact</Link>
         <Link to="blog">Blog and News</Link>
         <Link to='/login'><FaSignInAlt />Login</Link>
-                <Link to="/Register"><FaUser />Register</Link>
+        <Link to="/"><FaUser />Register</Link>
       </div>
     </div>
   );

@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import styles from "./Singup.module.css";
 import NavBar from "../../components/NavBar/NavBar";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Signup = () => {
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
+  const [reqError, setReqError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -22,33 +24,18 @@ const Signup = () => {
       setError(false);
     }
     let obj = {
-      firstname,
-      lastname,
+      firstName,
+      lastName,
       email,
       password,
     };
 
-    fetch("http://localhost:3000/signup", {
-      method: "post",
-      body: JSON.stringify(obj),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status === "success") {
-          setFirstName("");
-          setLastName("");
-          setEmail("");
-          setPassword("");
-          setConfirmPassword("");
-          alert("User added successfully");
-          navigate("/login");
-        } else {
-          alert("Something went wrong");
-        }
-      });
+    try {
+      const response = await axios.post('http://localhost:5000/api/users/register', obj)
+      navigate('/login');
+    } catch (error) {
+      setReqError(error.message);
+    }
   };
 
   return (
@@ -60,7 +47,7 @@ const Signup = () => {
             <label>First Name:</label>
             <input
               type="text"
-              value={firstname}
+              value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               className={styles.input}
             />
@@ -69,7 +56,7 @@ const Signup = () => {
             <label>Last Name:</label>
             <input
               type="text"
-              value={lastname}
+              value={lastName}
               onChange={(e) => setLastName(e.target.value)}
               className={styles.input}
             />
@@ -104,6 +91,12 @@ const Signup = () => {
           {error && (
             <div className={styles.formGroup}>
               <div className={styles.error}>Password mismatch!</div>
+            </div>
+          )}
+          
+          {reqError.trim().length > 0 && (
+            <div className={styles.formGroup}>
+              <div className={styles.error}>{reqError}</div>
             </div>
           )}
           <button type="submit" className={styles.button}>
