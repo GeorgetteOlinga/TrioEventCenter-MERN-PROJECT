@@ -7,20 +7,35 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { FaSignInAlt } from 'react-icons/fa';
 import { login, reset } from '../../store/auth/authSlice';
+import axios from 'axios'
 // import Spinner from '../components/Spinner'
 //-------------
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate()
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     let obj = {
       email,
       password,
     };
 
-    fetch("http://localhost:4000/login", {
+    try {
+      const request = await axios.post('http://localhost:5000/api/users/login', obj)
+      localStorage.setItem("token", request.data.token)
+      navigate("/home");
+    } catch (error) {
+      setError(error.message)
+      console.log(error)
+    }
+ 
+
+   
+/**
+    fetch("http://localhost:5000/api/users/login", {
       method: "post",
       body: JSON.stringify(obj),
       headers: {
@@ -39,6 +54,7 @@ const Login = () => {
         }
         console.log(data);
       });
+       */
   };
 
   return (
@@ -59,12 +75,18 @@ const Login = () => {
           <div className={styles.formGroup}>
             <label>Password</label>
             <input
-              type="text"
+              type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className={styles.input}
             />
           </div>
+          ""
+          {error.trim().length > 0 && 
+           <div className={styles.formGroup}>
+           <div className={styles.error}>Password mismatch!</div>
+         </div>
+          }
           <button className={styles.button} onClick={handleSubmit}>
             Login
           </button>

@@ -25,16 +25,11 @@ const Header = () => {
       <div className={styles.logo_image}>
         <img src={logo} alt="Logo" />
       </div>
-      <div className={styles.header_right}>
-        <button>
-          {/* <EventModal /> */}
-        </button>
-        
-          {/* <SignupModal /> */}
-        
-        <button className='btn' onClick={onLogout}>          <FaSignOutAlt />Logout</button>
+      <div className={styles.header_right}>        
+        <button className='btn' onClick={onLogout}>          
+        <FaSignOutAlt />Logout</button>
         <Link to="contact">Contact</Link>
-        <Link to="blog">Blog and News</Link>
+        <Link to="/event">Book Event</Link>
         <Link to='/login'><FaSignInAlt />Login</Link>
         <Link to="/"><FaUser />Register</Link>
       </div>

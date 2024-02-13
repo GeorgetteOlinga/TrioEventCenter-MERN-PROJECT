@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/Event.module.css";
+import styles from "./Event.module.css";
 
 const Event = () => {
   const [name, setName] = useState("");
@@ -21,7 +21,7 @@ const Event = () => {
       detail: additionalInfo,
     };
 
-    fetch("http://localhost:4000/event", {
+    fetch("http://localhost:5000/event", {
       method: "post",
       body: JSON.stringify(obj),
       headers: {
@@ -69,20 +69,21 @@ const Event = () => {
       </label>
 
       <label>
-        Date:
+        Event Date:<br/>
         <input
           type="date"
+          className={styles.dateField}
+
           onChange={(e) => setDate(e.target.value)}
-          className={styles.inputField}
         />
-      </label>
+      </label><br/> <br/>
 
       <label>
         Type of Event:
         <select
           value={eventType}
           onChange={(e) => setEventType(e.target.value)}
-          className={styles.inputField}
+          className={styles.selectField}
         >
           <option value="">Please choose an option</option>
           <option value="Ceremony">Ceremony</option>
@@ -100,7 +101,7 @@ const Event = () => {
         <select
           value={numberOfPeople}
           onChange={(e) => setNumberOfPeople(e.target.value)}
-          className={styles.inputField}
+          className={styles.selectField}
         >
           <option value="">Select Number of People</option>
           <option value="50-150">50-150</option>
@@ -125,6 +126,7 @@ const Event = () => {
       <label>
         Tell us more:
         <textarea
+        rows={8}
           value={additionalInfo}
           onChange={(e) => setAdditionalInfo(e.target.value)}
           className={styles.inputField}

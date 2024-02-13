@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
+import Event from "./components/Event/Event.jsx"
 // import MyRoutes from "./components/routes/Routes.jsx";
 import Header from "./components/header/Header";
 import 'react-toastify/dist/ReactToastify.css'
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Register />} />
+        <Route path="/event" element={<Event />} />
       </Routes>
       <Footer />
     </div>
