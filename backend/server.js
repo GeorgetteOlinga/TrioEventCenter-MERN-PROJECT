@@ -35,7 +35,7 @@ connectDB();
   app.use(express.urlencoded({extended: false}))
 
  app.use('/api/events', require('./routes/eventRoutes'));
- http://localhost:5000/api/users
+
  app.use('/api/users', require('./routes/userRoutes'));
 
 // //  =====  our first applications had all of the routes in the server like the one below...

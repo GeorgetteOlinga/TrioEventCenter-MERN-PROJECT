@@ -7,7 +7,7 @@ const User = require('../models/userModel.js');
 // @route   GET /api/event
 // @access  Private
 const getEvents = asyncHandler (async (req, res) => {
-    const events = await Event.find({ user: req.user.id});
+    const events = await Event.find({ userId: req.user.id});
     res.status(200).json(events);
 })
 
@@ -26,8 +26,12 @@ const setEvent = asyncHandler (async (req, res) => {
 
 
     const event = await Event.create({
-        text: req.body.detail,
-        user: req.user.id
+        type: req.body.type,
+        people: req.body.people,
+        number: req.body.number,
+        detail: req.body.detail,
+        date: req.body.date,
+        userId: req.user.id
     })
     res.status(200).json({ message: "Event added successfully", status: "success" });
 })

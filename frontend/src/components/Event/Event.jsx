@@ -3,8 +3,7 @@ import styles from "./Event.module.css";
 import axios from 'axios'
 
 const Event = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  
   const [date, setDate] = useState("2022-01-17");
   const [eventType, setEventType] = useState("");
   const [numberOfPeople, setNumberOfPeople] = useState("");
@@ -13,8 +12,6 @@ const Event = () => {
 
   const submitHandler = async () => {
     let obj = {
-      name,
-      email,
       date,
       type: eventType,
       people: numberOfPeople,
@@ -64,25 +61,6 @@ const Event = () => {
   return (
     <div>
       <div className={styles.eventForm}>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className={styles.inputField}
-        />
-      </label>
-
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className={styles.inputField}
-        />
-      </label>
 
       <label>
         Event Date:<br/>

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, reset } from '../../store/auth/authSlice';
 import Event from '../../components/Event/Event'
+import axios from 'axios'
 //--------------------
 
 import logo from "../../assets/triologo.jpg";
@@ -31,6 +32,20 @@ const Header = () => {
      */
     setShow(prev => !prev)
   }
+  const getEvents = async () => {
+    try {
+      const req = await axios.get('http://localhost:5000/api/events',  {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+      })
+      console.log(req.data)
+    } catch (e) {
+      console.log(e.message)
+
+    }
+  }
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.logo_image}>
@@ -46,6 +61,7 @@ const Header = () => {
        { /** <Link to="/event">Book Event</Link> */ }
         <Link to='/login'><FaSignInAlt />Login</Link>
         <Link to="/"><FaUser />Register</Link>
+        <button onClick={getEvents}> get events</button>
       </div>
       <div id="modal" 
       

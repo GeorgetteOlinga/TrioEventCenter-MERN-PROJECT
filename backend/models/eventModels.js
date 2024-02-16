@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const eventSchema = mongoose.Schema({
-    
-  firstName: String,
-  lastName: String,
-  email: String,
+  userId : {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
   date: String,
   type: String,
   people: String,
