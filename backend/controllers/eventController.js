@@ -15,13 +15,18 @@ const getEvents = asyncHandler (async (req, res) => {
 // @route   SET /api/events
 // @access  Private
 const setEvent = asyncHandler (async (req, res) => {
-    if(!req.body.text) {
+    console.log(req.body)
+    if(!req.body.detail) {
         res.status(400);
         throw new Error ("Please add a text field");
     }
 
+    console.log("got here")
+    console.log(req.user.id)
+
+
     const event = await Event.create({
-        text: req.body.text,
+        text: req.body.detail,
         user: req.user.id
     })
     res.status(200).json({ message: "Event added successfully", status: "success" });

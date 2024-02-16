@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Event.module.css";
+import axios from 'axios'
 
 const Event = () => {
   const [name, setName] = useState("");
@@ -10,7 +11,7 @@ const Event = () => {
   const [contact, setContact] = useState("");
   const [additionalInfo, setAdditionalInfo] = useState("");
 
-  const submitHandler = () => {
+  const submitHandler = async () => {
     let obj = {
       name,
       email,
@@ -21,7 +22,20 @@ const Event = () => {
       detail: additionalInfo,
     };
 
-    fetch("http://localhost:5000/event", {
+    try {
+      const response = await axios.post('http://localhost:5000/api/events', obj, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("token")}`
+        }
+      })
+      console.log(response.data)
+    } catch (error) {
+      console.log(error.message)
+    }
+
+    /**
+
+    fetch("http://localhost:5000/api/events", {
       method: "post",
       body: JSON.stringify(obj),
       headers: {
@@ -44,10 +58,12 @@ const Event = () => {
           console.log("Something went wrong");
         }
       });
-  };
+   */
+    };
 
   return (
-    <div className={styles.eventForm}>
+    <div>
+      <div className={styles.eventForm}>
       <label>
         Name:
         <input
@@ -136,6 +152,12 @@ const Event = () => {
         <button onClick={submitHandler}>Submit</button>
       </label>
       {/* Add submit button or further actions as needed */}
+    </div>
+    <p style={{
+      marginLeft: 20,
+      fontSize: 12
+    }}>  If you’re planning an event or have any questions about our venue, please complete the request information form above, call The Grand Event Center at 614.453.43-- or email infogy@columbushospitality.com.</p>
+  
     </div>
   );
 };
