@@ -4,14 +4,15 @@ import style from "./EventCategory.module.css";
 const EventCategory = () => {
   return (
     <div className={{...style.wrapper}}>
-      
+      <h4>
       <div>Meetings</div>
       <div>Confrences</div>
       <div>Weedings</div>
       <div>Birthday party</div>
       <div>Graduation party</div>
-      <div>Show</div>
-      
+      <div>Show</div></h4>
+      <span><img src="https://storage.googleapis.com/mv-prod-blog-en-assets/2020/02/how-to-stop-working-on-weekends.webp" alt="" /></span>
+      <span><img src="https://www.heartandsoulgourmetmeals.com.au/wp-content/uploads/2020/05/Family-Gatherings-1.jpg" alt="" /></span>
     </div>
   );
 };

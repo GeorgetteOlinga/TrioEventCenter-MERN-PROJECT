@@ -23,7 +23,15 @@ const Home = () => {
           Central Ohio.
         </p>
 <img src="https://img.grouponcdn.com/deal/wXWacwxHVLKPVtXbhYn5/1R-700x420/v1/c700x420.jpg" alt="" />
-       
+       <p>Impressive 4,000 square foot ballroom flooded with warm, natural light
+Additional social areas and open spaces for smaller meetings, breakout sessions, brainstorming, or networking
+Keep the conversation going in our relaxing outdoor courtyard with fire pit
+Professional audio/visual equipment, abundant outlets, and complimentary Wi-Fi access
+Event planner ensures a seamless and successful experience
+Full-service catering or customizable farm-fresh menus from our Executive Chef
+Overnight accommodations in adjacent hotels: Courtyard by Marriott and Hyatt Place
+Complimentary parking in adjacent 500-space garage
+Close proximity to the Greater Columbus Convention Center, downtown Columbus, and easy highway access</p>
       </div>
     </div>
   );
