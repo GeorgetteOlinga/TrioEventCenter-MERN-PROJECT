@@ -1,8 +1,9 @@
-import style from "../styles/Services.module.css";
+import React from "react";
+import style from "./Services.module.css";
 
 const Services = () => {
   return (
-    <div className={style.wrapper}>
+    <div className={{...style.wrapper}}>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis
         repudiandae veniam iure doloremque ea! Reprehenderit amet doloremque

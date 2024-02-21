@@ -8,6 +8,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import Login from "./components/LoginForm/Login";
 import Register from "./pages/Register/Register";
 import Footer from './components/footer/Footer';
+import Services from "./pages/services/Services";
+import Gallery from "./pages/Gallery/Gallery";
+import EventCategory from './pages/EventCategory/EventCategory';
 
 import Home from './pages/home/Home'
 
@@ -25,6 +28,11 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Register />} />
         <Route path="/event" element={<Event />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/eventCategory" element={<EventCategory />} />
+
+        
         
       </Routes>
       <Footer />
