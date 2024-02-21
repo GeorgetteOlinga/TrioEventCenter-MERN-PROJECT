@@ -12,7 +12,7 @@ const Home = () => {
     }
   }, [])
   return (
-    <div className={styles.wrapper}>
+    <div className={{...styles.wrapper}}>
       <div>
         <h3>WELCOME TO THE TRIO EVENT CENTER than an event center</h3>
         <p>
@@ -22,7 +22,8 @@ const Home = () => {
           of Columbus most vibrant areas for an experience unlike any other in
           Central Ohio.
         </p>
-        
+<img src="https://img.grouponcdn.com/deal/wXWacwxHVLKPVtXbhYn5/1R-700x420/v1/c700x420.jpg" alt="" />
+       
       </div>
     </div>
   );
