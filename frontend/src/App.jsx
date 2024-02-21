@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import 'react-toastify/dist/ReactToastify.css'
 import Login from "./components/LoginForm/Login";
 import Register from "./pages/Register/Register";
-import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer';
 
 import Home from './pages/home/Home'
 
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Register />} />
         <Route path="/event" element={<Event />} />
+        
       </Routes>
       <Footer />
     </div>
@@ -85,4 +86,4 @@ export default App;
 //   )
 // }
 
-// export default App
+ //export default App

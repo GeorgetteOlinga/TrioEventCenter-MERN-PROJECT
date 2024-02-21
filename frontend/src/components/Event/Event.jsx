@@ -134,10 +134,9 @@ const Event = () => {
     <p style={{
       marginLeft: 20,
       fontSize: 12
-    }}>  If you’re planning an event or have any questions about our venue, please complete the request information form above, call The Grand Event Center at 614.453.43-- or email infogy@columbushospitality.com.</p>
-  
-    </div>
-  );
+    }}>  If you’re planning an event or have any questions about our venue, please complete the request information form above, call The Grand Event Center at 614.453.43-- or email trioentertainment@gmail.com.</p>
+
+ </div> );
 };
 
 export default Event;

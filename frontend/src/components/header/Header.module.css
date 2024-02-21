@@ -1,12 +1,12 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  background-color: #56c6a9;
+  background-color: #22241fae;
   padding: 1rem;
 }
 
 .logo_image > img {
-  width: 17%;
+  width: 16%;
 }
 
 .header_right {
@@ -20,7 +20,7 @@
   color: black;
 }
 .header_right button {
-  /* font-size: 1.05rem; */
+   font-size: 1.05rem; 
 
   background-color: darkred;
   border-radius: 0;

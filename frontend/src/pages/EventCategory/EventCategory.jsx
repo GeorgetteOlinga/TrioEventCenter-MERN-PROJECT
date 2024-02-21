@@ -1,3 +1,4 @@
+import React from "react";
 import style from "../styles/EventCategory.module.css";
 
 const EventCategory = () => {
