@@ -60,8 +60,10 @@ const Event = () => {
 
   return (
     <div>
-      <div className={styles.eventForm}>
+ {/* this is the closing botton  */}
+ <button title="Close (Esc)" type="button" class="mfp-close">×</button>
 
+      <div className={styles.eventForm}>
       <label>
         Event Date:<br/>
         <input
@@ -131,10 +133,10 @@ const Event = () => {
       </label>
       {/* Add submit button or further actions as needed */}
     </div>
-    <p style={{
+    <p style="{{
       marginLeft: 20,
       fontSize: 12
-    }}>  If you’re planning an event or have any questions about our venue, please complete the request information form above, call The Grand Event Center at 614.453.43-- or email trioentertainment@gmail.com.</p>
+    }}">  If you’re planning an event or have any questions about our venue, please complete the request information form above, call The Grand Event Center at 614.453.43-- or email trioentertainment@gmail.com.</p>
 
  </div> );
 };

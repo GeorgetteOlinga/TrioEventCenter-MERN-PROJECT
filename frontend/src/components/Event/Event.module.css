@@ -1,4 +1,31 @@
 /* Signup.module.css */
+div .mfp-close {
+  color: white;
+}
+
+ .mfp-close {
+  color: #5889a3;
+  font: 50px 'Montserrat',Arial,sans-serif;
+  margin: 5px 10px;
+}
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: .65;
+  filter: alpha(opacity = 65);
+  padding: 0 0 18px 10px;
+  color: #fff;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+}
+
 
 .eventForm {
     max-width: 400px;

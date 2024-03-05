@@ -49,6 +49,7 @@ is done, what still in progress, and what is still need to be covered.>
 ### Unsolved Problems:
 - unfinished frontend functionalities
 - connect frontend to backend 
+- deploy on github
 - deploy on render.com or mongo
 
 ### Future Enhancements:
